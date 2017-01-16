@@ -15,15 +15,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
-
-import com.kpioneer.changeskin.skin.ResourcesManager;
+import android.widget.Toast;
+import com.kpioneer.changeskin.skin.SkinManager;
+import com.kpioneer.changeskin.skin.callback.ISkinChangingCallback;
 import com.nineoldandroids.view.ViewHelper;
-
 import java.io.File;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.Arrays;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -124,7 +121,23 @@ public class MainActivity extends AppCompatActivity {
         {
             case R.id.action_changeSkin:
 
-                loadPlugin(mSkinPluginPath,mSkinPluginPkg);
+                SkinManager.getsInstance().changeSkin(mSkinPluginPath,mSkinPluginPkg, new ISkinChangingCallback() {
+                    @Override
+                    public void onStart() {
+
+                    }
+
+                    @Override
+                    public void onError(Exception e) {
+
+                       Toast.makeText(MainActivity.this,"换肤失败",Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        Toast.makeText(MainActivity.this,"换肤成功",Toast.LENGTH_SHORT).show();
+                    }
+                });
                 break;
             case R.id.action_testFactory:
                 Intent intent = new Intent(this,TestFactoryActivity.class);
@@ -134,31 +147,5 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-    private void loadPlugin(String SkinPluginPath, String SkinPluginPkg) {
-        try {
-            AssetManager assetManager = AssetManager.class.newInstance();
-            Method addAssetPathMethod = assetManager.getClass().getMethod("addAssetPath",String.class);
-            addAssetPathMethod.invoke(assetManager,SkinPluginPath);
-            Resources superResources = getResources();
-            Resources resources = new Resources(assetManager,superResources.getDisplayMetrics(),superResources.getConfiguration());
 
-            ResourcesManager resourcesManager = new ResourcesManager(resources,SkinPluginPkg);
-            Drawable drawable =resourcesManager.getDrawableByResName("skin_main_bg");
-
-
-            if(drawable!=null){
-                idDrawerLayout.setBackground(drawable);
-            }
-
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        }
-    }
 }

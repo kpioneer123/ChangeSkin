@@ -14,13 +14,10 @@ import java.util.List;
 public class SkinView {
     private View mView;
 
-
     private List<SkinAttr> mAttrs;
 
     public SkinView(View view,List<SkinAttr> attrs) throws Exception {
-
-
-        if(mView == null)
+        if(view == null)
         {
             throw new Exception("view cant not be null");  //开发中的输入合法性检验
         }else {
@@ -32,8 +29,6 @@ public class SkinView {
         }else {
             mAttrs  = attrs;
         }
-
-
     }
 
     public View getView() {
@@ -44,16 +39,8 @@ public class SkinView {
         this.mView = View;
     }
 
-    public List<SkinAttr> getAttrs() {
-        return mAttrs;
-    }
-
-    public void setAttrs(List<SkinAttr> Attrs) {
-        this.mAttrs = Attrs;
-    }
-
     public void apply(){
-
+        if (mView == null) return;
         for(SkinAttr attr : mAttrs){
             attr.apply(mView);
         }

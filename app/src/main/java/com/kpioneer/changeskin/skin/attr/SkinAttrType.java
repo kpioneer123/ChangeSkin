@@ -51,16 +51,20 @@ public enum SkinAttrType {
         }
     };
 
-    public String getResType() {
-        return resType;
+
+    String attrType ;
+
+    SkinAttrType(String attrType)
+    {
+        this.attrType = attrType;
+    }
+
+    public String getAttrType()
+    {
+        return attrType;
     }
 
 
-
-    String resType ;
-    SkinAttrType(String type){
-        resType = type;
-    }
     public abstract void  apply(View view, String mResName);
 
     public ResourcesManager getResourcesManager(){

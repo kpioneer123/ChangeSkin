@@ -4,9 +4,13 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#FFFFFF</color>
-    <color name="skin_item_txt_color">#333333</color>
+    <color name="skin_item_color">#333333</color>
+    <color name="skin_meau_item_color">#333333</color>
     <color name="trans">#00000000</color>
 
+    <color name="skin_item_color_red">#de0c0c</color>
+    <color name="skin_meau_item_color_red">#e10d0d</color>
 
-
+    <color name="skin_item_color_green">#15e882</color>
+    <color name="skin_meau_item_color_green">#14d024</color>
 </resources>

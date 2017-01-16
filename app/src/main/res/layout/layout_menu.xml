@@ -14,6 +14,7 @@
         >
         <RelativeLayout
             android:id="@+id/rl_innerchange01"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -31,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="应用类换肤(red)"
-                android:textColor="@color/skin_item_txt_color"
+                android:textColor="@color/skin_meau_item_color"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:textSize="16sp"
@@ -43,6 +44,7 @@
         <RelativeLayout
             android:id="@+id/rl_innerchange02"
             android:layout_width="match_parent"
+            android:clickable="true"
             android:layout_height="wrap_content">
 
             <ImageView
@@ -59,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="应用类换肤(green)"
-                android:textColor="@color/skin_item_txt_color"
+                android:textColor="@color/skin_meau_item_color"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:textSize="16sp"
@@ -71,6 +73,7 @@
         <RelativeLayout
             android:id="@+id/rl_innerchange03"
             android:layout_width="match_parent"
+            android:clickable="true"
             android:layout_height="wrap_content">
 
             <ImageView
@@ -87,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="第三个item"
-                android:textColor="@color/skin_item_txt_color"
+                android:textColor="@color/skin_meau_item_color"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:textSize="16sp"
@@ -100,6 +103,7 @@
         <RelativeLayout
             android:id="@+id/rl_innerchange04"
             android:layout_width="match_parent"
+            android:clickable="true"
             android:layout_height="wrap_content">
 
             <ImageView
@@ -116,7 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="插件式换肤1"
-                android:textColor="@color/skin_item_txt_color"
+                android:textColor="@color/skin_meau_item_color"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:textSize="16sp"
@@ -128,6 +132,7 @@
         <RelativeLayout
             android:id="@+id/rl_innerchange05"
             android:layout_width="match_parent"
+            android:clickable="true"
             android:layout_height="wrap_content">
 
             <ImageView
@@ -144,7 +149,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="恢复默认"
-                android:textColor="@color/skin_item_txt_color"
+                android:textColor="@color/skin_meau_item_color"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:textSize="16sp"

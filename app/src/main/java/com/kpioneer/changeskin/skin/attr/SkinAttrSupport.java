@@ -53,11 +53,11 @@ public class SkinAttrSupport {
 
     private static SkinAttrType getSupportAttrType(String attrName) {
 
-        for(SkinAttrType attType : SkinAttrType.values()){
+        for(SkinAttrType skinAttrType : SkinAttrType.values()){
 
-            if(attType.getResType().equals(attrName))
+            if(skinAttrType.getAttrType().equals(attrName))
             {
-                return attType;
+                return skinAttrType;
             }
 
         }

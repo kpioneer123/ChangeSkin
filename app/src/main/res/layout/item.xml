@@ -10,7 +10,7 @@
     android:layout_height="42dp"
     android:layout_centerVertical="true"
     android:layout_marginLeft="8dp"
-    android:src="@mipmap/skin_left_mean_icon"
+    android:src="@mipmap/skin_left_mean_icon_red"
     />
 
     <TextView
@@ -21,7 +21,7 @@
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/iv_icon"
         android:layout_toEndOf="@+id/iv_icon"
-        android:textColor="@color/skin_item_txt_color"
+        android:textColor="@color/skin_item_color"
         />
 
     <TextView
@@ -32,7 +32,7 @@
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/tv_title"
         android:layout_marginLeft="15dp"
-        android:textColor="@color/skin_item_txt_color"
+        android:textColor="@color/skin_item_color"
         />
 
 </RelativeLayout>

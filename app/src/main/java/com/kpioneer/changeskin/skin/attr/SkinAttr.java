@@ -14,31 +14,17 @@ public class SkinAttr {
 
 
 
-    private String mResName;
-    private SkinAttrType mType;
+    private String resName;
+    private SkinAttrType type;
 
-    public SkinAttr(String ResName, SkinAttrType Type) {
-        mResName = ResName;
-        mType = Type;
+    public SkinAttr(String resName, SkinAttrType type) {
+        this.resName = resName;
+        this.type = type;
     }
 
     public void apply(View view) {
-        mType.apply(view,mResName);
+        type.apply(view,resName);
     }
 
-    public String getResName() {
-        return mResName;
-    }
 
-    public void setResName(String ResName) {
-        this.mResName = ResName;
-    }
-
-    public SkinAttrType getmType() {
-        return mType;
-    }
-
-    public void setType(SkinAttrType Type) {
-        this.mType = Type;
-    }
 }

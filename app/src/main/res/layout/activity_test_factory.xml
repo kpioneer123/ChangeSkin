@@ -9,8 +9,8 @@
 <TextView
     android:text="@string/helloworld"
     android:layout_centerInParent="true"
-    android:background="@mipmap/skin_left_mean_icon"
-    android:textColor="@color/skin_item_txt_color"
+    android:background="@mipmap/skin_left_mean_icon_red"
+    android:textColor="@color/skin_item_color"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
 
